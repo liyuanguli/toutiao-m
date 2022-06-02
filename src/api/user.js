@@ -41,6 +41,6 @@ export const getUserInfo = () => {
 export const getUserChannels = () => {
   return request({
     method: 'GET',
-    url: '/mp/v1_0/channels'
+    url: '/app/v1_0/channels'
   })
 }
