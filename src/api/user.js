@@ -6,7 +6,7 @@ import request from '@/utils/request'
 export const login = data => {
   return request({
     method: 'POST',
-    url: '/mp/v1_0/authorizations',
+    url: '/app/v1_0/authorizations',
     data
   })
 }
@@ -17,7 +17,7 @@ export const login = data => {
 export const sendSms = mobile => {
   return request({
     method: 'GET',
-    url: `/mp/v1_0/sms/codes/:${mobile}`
+    url: `/app/v1_0/sms/codes/${mobile}`
   })
 }
 
@@ -27,7 +27,7 @@ export const sendSms = mobile => {
 export const getUserInfo = () => {
   return request({
     method: 'GET',
-    url: '/mp/v1_0/user/profile'
+    url: '/app/v1_0/user/profile'
     // 发送请求头数据
     /* headers: {
       Authorization: `Bearer ${store.state.user.token}`
@@ -41,6 +41,29 @@ export const getUserInfo = () => {
 export const getUserChannels = () => {
   return request({
     method: 'GET',
-    url: '/app/v1_0/channels'
+    url: '/app/v1_0/user/channels'
+  })
+}
+
+/**
+ * 关注用户
+ */
+export const addFollow = target => {
+  return request({
+    method: 'POST',
+    url: '/app/v1_0/user/followings',
+    data: {
+      target
+    }
+  })
+}
+
+/**
+ * 取消关注用户
+ */
+export const deleteFollow = target => {
+  return request({
+    method: 'DELETE',
+    url: `/app/v1_0/user/followings/${target}`
   })
 }

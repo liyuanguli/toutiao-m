@@ -65,7 +65,7 @@ export default {
         const { data } = await getArticles(
           {
             channel_id: this.channel.id,
-            timestamp: this.timestamp || Date.now(),
+            timestamp: this.timestamp || 1556789000001,
             with_top: 1
           }
         )
