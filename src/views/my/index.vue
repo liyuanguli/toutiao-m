@@ -13,7 +13,7 @@ class="avator"
 <span class="name">{{userInfo.name}}</span>
     </div>
     <div class="right">
-<van-button size="mini" round>编辑资料</van-button>
+<van-button size="mini" round to="/user/profile">编辑资料</van-button>
     </div>
   </div>
   <div class="data-status">
@@ -22,15 +22,15 @@ class="avator"
       <span class="text">头条</span>
     </div>
     <div class="data-item">
-      <span class="count">10</span>
+      <span class="count">25</span>
       <span class="text">关注</span>
     </div>
     <div class="data-item">
-      <span class="count">10</span>
+      <span class="count">12</span>
       <span class="text">粉丝</span>
     </div>
     <div class="data-item">
-      <span class="count">10</span>
+      <span class="count">51</span>
       <span class="text">获赞</span>
     </div>
   </div>
